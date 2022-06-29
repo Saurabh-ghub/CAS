@@ -15,13 +15,13 @@
 	 <img src="https://strandls.com/wp-content/uploads/2021/03/main-logo.png" style="width:604px;height:100px">
             <h2>
                 <i class="mdi mdi-door-open"></i>
-                <span th:utext="#{screen.success.header}">Log In Successful</span>
+                <span style ="color:green" th:utext="#{screen.success.header}">Log In Successful</span>
             </h2>
-            <p th:utext="#{screen.success.success(${authentication.principal.id})}">You, <strong>username</strong>, have successfully logged into the Central Authentication Service.
+            <p style = "color:green" th:utext="#{screen.success.success(${authentication.principal.id})}">You, <strong>username</strong>, have successfully logged into the Central Authentication Service.
                 However, you are seeing this page because CAS does not know about your target destination and how
                 to get you there. Examine the authentication request again and make sure a target service/application that is authorized and registered with CAS is specified.</p>
 
-            <p th:utext="#{screen.success.security}">
+            <p style="color:green" th:utext="#{screen.success.security}">
                 When you are finished, for security reasons, please <a href="logout">log out</a> and exit your web browser.
             </p>
 
