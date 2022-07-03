@@ -14,7 +14,7 @@
 <main role="main" class="container mt-3 mb-3">
     <div th:fragment="submitButton (messageKey)">
 
-        <button 
+        <button style="background-color:#5cb85c;"
                 class="mdc-button mdc-button--raised" 
                 th:if="${recaptchaSiteKey == null}"
                 name="submit"
@@ -26,7 +26,8 @@
         <span th:unless="${recaptchaSiteKey == null}">
              <span th:if="${#strings.equalsIgnoreCase(recaptchaVersion, 'GOOGLE_RECAPTCHA_V2')}">
                 <button th:unless="${recaptchaSiteKey != null AND recaptchaInvisible != null AND recaptchaInvisible}"
-                        class="mdc-button mdc-button--raised"
+			style="background-color:#5cb85c;"                       
+			 class="mdc-button mdc-button--raised"
                         name="submit"
                         accesskey="l"
                         type="submit"
@@ -35,6 +36,7 @@
                 </button>
                 <button th:if="${recaptchaSiteKey != null AND recaptchaInvisible != null AND recaptchaInvisible}"
                         class="mdc-button mdc-button--raised"
+			style="background-color:#5cb85c;"
                         th:attr="data-sitekey=${recaptchaSiteKey}, data-badge=${recaptchaPosition}"
                         data-callback="onRecaptchaV2Submit"
                         name="submitBtn"
@@ -44,7 +46,7 @@
             </span>
 
             <span th:if="${#strings.equalsIgnoreCase(recaptchaVersion, 'GOOGLE_RECAPTCHA_V3')}">
-                <button class="mdc-button mdc-button--raised"
+                <button style="background-color:#5cb85c;" class="mdc-button mdc-button--raised"
                         th:if="${recaptchaSiteKey != null}"
                         name="submit"
                         th:attr="data-sitekey=${recaptchaSiteKey}"
@@ -58,7 +60,7 @@
 
 
             <span th:if="${#strings.equalsIgnoreCase(recaptchaVersion, 'HCAPTCHA')}" th:remove="tag">
-                <button class="mdc-button mdc-button--raised"
+                <button style="background-color:#5cb85c;" class="mdc-button mdc-button--raised"
                         name="submit"
                         accesskey="l"
                         type="submit"
