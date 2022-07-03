@@ -12,10 +12,11 @@
 <main role="main" class="container mt-3 mb-3">
     <div layout:fragment="content" class="row">
         <div class="w-100 m-auto mdc-card p-4 text-justify">
-	 <img src="https://strandls.com/wp-content/uploads/2021/03/main-logo.png" style="width:604px;height:100px">
+	 <img src="https://strandls.com/wp-content/uploads/2021/03/main-logo.png" style="width:400px;height:128px">
+<br><br><br>
             <h2>
-                <i class="mdi mdi-door-open"></i>
-                <span style ="color:green" th:utext="#{screen.success.header}">Log In Successful</span>
+                <i class="mdi mdi-door-open" style="position:relative; top :20px"></i>
+                <span style ="color:green;position:relative; top :20px" th:utext="#{screen.success.header}">Log In Successful</span>
             </h2>
             <p style = "color:green" th:utext="#{screen.success.success(${authentication.principal.id})}">You, <strong>username</strong>, have successfully logged into the Central Authentication Service.
                 However, you are seeing this page because CAS does not know about your target destination and how

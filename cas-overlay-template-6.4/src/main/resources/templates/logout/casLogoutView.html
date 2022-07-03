@@ -12,19 +12,21 @@
 <body>
 <main role="main" class="container mt-3 mb-3">
     <div layout:fragment="content">
-        <div class="w-50 m-auto mdc-card p-4">
+ <div class="w-50 m-auto mdc-card p-4">
+       
  <img src="https://strandls.com/wp-content/uploads/2021/03/main-logo.png" style="width:400px;height:128px">
 <br>
 <br>
 <br>
-            <h2 class="banner-heading">
-                <i class="mdi mdi-logout"></i>
-                <span style="color:green" th:utext="#{screen.logout.header}">Log Out Successful</span>
+<br><br><br>
+            <h2 >
+               <i class="mdi mdi-logout" style="position:relative ; top : 20px"></i>
+                <span style="color:green; position:relative ; top : 20px"; th:utext="#{screen.logout.header}"> Log Out Successful</span>
             </h2>
 
             <p class="banner-message" style="color:green" th:utext="#{screen.logout.success}">You have successfully logged out of the Central Authentication
                 Service. You may <a href="login">log in</a> again.</p>
-            <p class="banner-message" th:utext="#{screen.logout.security}">For security reasons, exit your web browser.</p>
+            <p class="banner-message" style="color:green" th:utext="#{screen.logout.security}">For security reasons, exit your web browser.</p>
         </div>
     </div>
 </main>

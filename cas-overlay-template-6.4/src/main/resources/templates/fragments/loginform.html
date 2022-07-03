@@ -49,7 +49,7 @@
                               th:utext="#{screen.welcome.forcedsso(${existingSingleSignOnSessionPrincipal.id},${registeredService.name})}"/>
                     </div>
 
- <img src="https://strandls.com/wp-content/uploads/2021/03/main-logo.png" style="width:604px;height:128px">
+ <img src="https://strandls.com/wp-content/uploads/2021/03/main-logo.png" style="position:relative;left:100px;width:400px;height:128px">
 <br>
 <br>
 <br>
@@ -68,8 +68,8 @@
                     <section class="cas-field my-3" id="usernameSection">
                         <div class="d-flex">
 
-                            <label for="username" class="mdc-text-field mdc-text-field--outlined">
-                                <input class="mdc-text-field__input"
+                            <label for="username" class="mdc-text-field mdc-text-field--outlined" style="color:#0c2936">
+                                <input class="mdc-text-field__input" style="color:#0c2936"
                                        id="username"
                                        size="25"
                                        type="text"
@@ -80,12 +80,12 @@
                                        spellcheck="false"
                                        autocomplete="username"/>
 
-                                <span class="mdc-notched-outline">
-                                    <span class="mdc-notched-outline__leading"></span>
-                                    <span class="mdc-notched-outline__notch">
-                                      <span class="mdc-floating-label" th:utext="#{screen.welcome.label.netid}">Username</span>
+                                <span class="mdc-notched-outline" style="color:#0c2936">
+                                    <span class="mdc-notched-outline__leading" style="color:#0c2936"></span>
+                                    <span class="mdc-notched-outline__notch" style="color:#0c2936">
+                                      <span class="mdc-floating-label" style="color:#0c2936" th:utext="#{screen.welcome.label.netid}">Username</span>
                                     </span>
-                                    <span class="mdc-notched-outline__trailing"></span>
+                                    <span class="mdc-notched-outline__trailing" style="color:#0c2936"></span>
                                   </span>
                             </label>
 
@@ -110,17 +110,17 @@
                             <div class="d-flex caps-check">
 
                                 <label for="password"
-                                       class="mdc-text-field mdc-text-field--outlined mdc-text-field--with-trailing-icon">
+                                       class="mdc-text-field mdc-text-field--outlined mdc-text-field--with-trailing-icon" style="color:#0c2936">
 
                                     <input class="mdc-text-field__input pwd"
-                                           type="password" id="password" size="25"
+                                           type="password" id="password" size="25" style="color:#0c2936"
                                            th:accesskey="#{screen.welcome.label.password.accesskey}"
                                            th:field="*{password}" autocomplete="off"/>
 
                                     <span class="mdc-notched-outline">
                                             <span class="mdc-notched-outline__leading"></span>
                                             <span class="mdc-notched-outline__notch">
-                                              <span class="mdc-floating-label" th:utext="#{screen.welcome.label.password}">Username</span>
+                                              <span class="mdc-floating-label" th:utext="#{screen.welcome.label.password}">Password</span>
                                             </span>
                                             <span class="mdc-notched-outline__trailing"></span>
                                         </span>
@@ -135,7 +135,7 @@
                                 </p>
                             </div>
                         </div>
-                        <button class="reveal-password mdc-button mdc-button--raised mdc-input-group-append mdc-icon-button" type="button">
+                        <button  class="reveal-password mdc-button mdc-button--raised mdc-input-group-append mdc-icon-button" type="button">
                             <i class="mdi mdi-eye reveal-password-icon"></i>
                             <span class="sr-only">Toggle Password</span>
                         </button>
@@ -287,7 +287,7 @@
                     <div th:replace="fragments/submitbutton :: submitButton (messageKey='screen.welcome.button.login')"/>
                     
                    
-                    <button type="reset" style="position:relative;top:-35px; left:145px; background-color:#153e50; border-color: #153e50; color:white; width:100px; height:36px; border-radius:4px;" onclick="document.getElementById('password').value=''"> CLEAR </button>
+                    <button type="reset" style="position:relative; left:15px; width:100px; height:36px; border-radius:4px;" onclick="document.getElementById('password').value=''"> CLEAR </button>
 
 
 		  </div>  
