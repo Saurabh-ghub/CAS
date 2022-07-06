@@ -126,11 +126,12 @@ dependencies {
      **/
     implementation "org.apereo.cas:cas-server-support-jdbc:${project.'cas.version'}"
     implementation "org.apereo.cas:cas-server-support-jdbc-drivers:${project.'cas.version'}"	
-    	
+/*  added for pac4j */
+     implementation "org.apereo.cas:cas-server-support-pac4j-webflow:${project.'cas.version'}"	
 
     implementation "org.apereo.cas:cas-server-core-api-configuration-model"
     implementation "org.apereo.cas:cas-server-webapp-init"
-
+   
     if (project.hasProperty("casModules")) {
         def dependencies = project.getProperty("casModules").split(",")
         dependencies.each {
