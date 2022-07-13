@@ -109,8 +109,8 @@ header>nav .cas-brand .cas-logo {
 .login-section {
     border-right: 1px solid rgba(0, 0, 0, .2);
     border-right: var(--cas-theme-border-light, 1px solid rgba(0, 0, 0, .2));
-    padding: 2rem 2.5rem;
-    flex: 1 1 auto;
+    padding: 0.75rem 2.5rem;
+    flex: 1 1 auto !important;
     /* IE flex fix */
 }
 
