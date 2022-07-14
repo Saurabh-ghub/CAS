@@ -11,7 +11,7 @@
 </head>
 
 <body>
-    <main role="main" >
+    <main role="main" class="container mt-3 mb-3">
         <div th:fragment="loginProviders" th:remove="tag" class="login-providers">
             <script type="text/javascript">
                 var providers = [];
@@ -19,11 +19,11 @@
             
             <div th:if="${delegatedAuthenticationProviderConfigurations}">
 
-                <h3 class="text-center mt-md-0 mt-4">
+                <h5 class="text-center mt-md-0 mt-4">
                     <i class="fas fa-user-shield"></i>
                     <span th:if="${delegatedAuthenticationProviderPrimary == null}"
                           th:utext="#{screen.welcome.label.loginwith}">External Identity Providers</span>
-                </h3>
+                </h5>
 
                 <div class="card-title" th:if="${delegatedAuthenticationProviderPrimary != null}">
                     <div class="alert alert-info" role="alert">
@@ -60,7 +60,8 @@
                                 th:href="@{${entry.redirectUrl}}"
                                 th:attr="autoredirect=${entry.autoRedirect}"
                                 th:inline="text"
-                                th:title="${entry.name + ' ' + entry.type}">
+                                th:title="${entry.name + ' ' + entry.type}"
+				style="background-color:#5cb85c;">
 
                                 <span th:case="twitter" th:class="${#strings.defaultString(entry.cssClass,'mdi mdi-twitter')}"></span>
                                 <span th:case="windowslive" th:class="${#strings.defaultString(entry.cssClass,'mdi mdi-windows')}"></span>
@@ -75,8 +76,11 @@
                                 <span th:case="oidc" th:class="${#strings.defaultString(entry.cssClass,'mdi mdi-openid')}"></span>
                                 <span th:case="saml2" th:class="${#strings.defaultString(entry.cssClass,'mdi mdi-account-key')}"></span>
                                 <span th:case="cas" th:class="${#strings.defaultString(entry.cssClass,'mdi mdi-login')}"></span>
-                                <span th:case="*" class="mdi mdi-account-key"></span>
-                                [[${#strings.defaultString(entry.title,entry.name)}]]
+                               <!-- <span th:case="*" class="mdi mdi-account-key"></span> -->
+				
+                               <!-- [[${#strings.defaultString(entry.title,entry.name)}]] -->
+				<span th:case="*" class="mdi mdi-google-plus"></span>
+			       GOOGLE
                             </a>
 
                             <script th:inline="javascript">
