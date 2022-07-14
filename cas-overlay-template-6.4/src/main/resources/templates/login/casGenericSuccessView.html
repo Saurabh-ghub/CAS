@@ -25,7 +25,7 @@
             <p style="color:green" th:utext="#{screen.success.security}">
                 When you are finished, for security reasons, please <a href="logout">log out</a> and exit your web browser.
             </p>
-
+<!--
             <p th:unless="${#maps.isEmpty(authentication.principal.attributes)}">
                 The following attributes and services are resolved and available for <strong th:utext="${authentication.principal.id}" />:
             
@@ -111,7 +111,7 @@
                         </table>
                     </div>
                 </section>
-
+-->
                 <section id="attribute-tab-2" class="d-none attribute-tab" th:if="${authorizedServices}">
                     <div class="w-100 mdc-data-table mx-auto my-4" id="divAuthorizedServices" role="tabpanel" aria-labelledby="attributes-tab">
                         <table id="attributesTable" class="mdc-data-table__table" style="white-space: unset">
