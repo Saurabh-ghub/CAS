@@ -61,7 +61,7 @@
                                 th:attr="autoredirect=${entry.autoRedirect}"
                                 th:inline="text"
                                 th:title="${entry.name + ' ' + entry.type}"
-				style="background-color:#5cb85c;">
+				style="background-color:white;color:black;text-transform:none">
 
                                 <span th:case="twitter" th:class="${#strings.defaultString(entry.cssClass,'mdi mdi-twitter')}"></span>
                                 <span th:case="windowslive" th:class="${#strings.defaultString(entry.cssClass,'mdi mdi-windows')}"></span>
@@ -79,8 +79,9 @@
                                <!-- <span th:case="*" class="mdi mdi-account-key"></span> -->
 				
                                <!-- [[${#strings.defaultString(entry.title,entry.name)}]] -->
-				<span th:case="*" class="mdi mdi-google-plus"></span>
-			       GOOGLE
+			<!-- 	<span th:case="*" class="mdi mdi-google-plus"></span> -->
+<img src = "https://icon-library.com/images/google-login-icon/google-login-icon-24.jpg" height="30" width ="30">
+			       Google
                             </a>
 
                             <script th:inline="javascript">
